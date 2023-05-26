@@ -22,7 +22,7 @@ header {
     padding-left: 20px; 
     padding-right: 20px;
     text-align: left;
-    background: #1abc9c;
+    background: #0fb9b1;
     /* color: black; */
     font-size: 8px;
     display: flex;
@@ -42,7 +42,6 @@ header {
   .button {
     background-color: frosted white - rgba(225, 225, 225, .9);
     padding: 10px 10px;
-    border-radius: 4px;
     outline: none;
 
   }
@@ -75,6 +74,17 @@ header {
   img {
     height: 30vh;
     width: 30vh;
+  }
+  #poll-box{
+    padding: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  #lets-cook-button {
+    background-color: #0fb9b1;
+    width: 10vh;
   }
   /* #logo > img {
     background-image: url('assets/cookpot.svg');

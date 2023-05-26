@@ -9,7 +9,30 @@
       <button class="button" id="header-button">ADD A RECIPE</button>
     </header>
     <main>
-      <article id="poll-box" class="box"></article>
+      <article id="poll-box" class="box">
+
+        <h1>What are you looking for?</h1>
+        <!-- <fieldset>
+          <legend>Select a maintenance drone:</legend> -->
+      
+          <div>
+            <input type="radio" id="Side" name="drone" value="Side"
+                   checked>
+            <label for="Side">Side</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="MainDish" name="drone" value="Main Dish">
+            <label for="MainDish">Main Dish</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="Dessert" name="drone" value="Dessert">
+            <label for="Dessert">Dessert</label>
+          </div>
+      <!-- </fieldset> -->
+        <button class="button" id="lets-cook-button">LET'S COOK!</button>
+      </article>
       <article id="logo" class="box">
         <img src="assets/cookpot.svg"></img>
       </article>
