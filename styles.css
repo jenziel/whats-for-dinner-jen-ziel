@@ -93,6 +93,13 @@ header {
     background-color: #0fb9b1;
     width: 20vh;
   }
+  #outputMessage {
+    display: flex;
+    flex-direction: column;
+  }
+  #specificDish {
+    font-size:xxx-large;
+  }
   /* #logo > img {
     background-image: url('assets/cookpot.svg');
     background-size: contain;
