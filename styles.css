@@ -73,7 +73,7 @@ header {
     font-size:xx-large;
   }
   
-  #logo {
+  #logo-box {
     display: flex;
     justify-content: center;
     align-items: center;
