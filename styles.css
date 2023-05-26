@@ -10,6 +10,7 @@ red - #ee5253
 
 body {
   font-family: sans-serif;
+  margin: unset;
 }
 
 header {
@@ -17,7 +18,7 @@ header {
     padding-left: 20px; 
     padding-right: 20px;
     text-align: left;
-    padding: 5px;
+    padding: 0px;
     padding-left: 20px; 
     padding-right: 20px;
     text-align: left;
@@ -44,4 +45,12 @@ header {
     border-radius: 4px;
     outline: none;
 
+  }
+
+  main {
+    background-image: url('assets/burger-friends.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
