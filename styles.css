@@ -42,6 +42,7 @@ header {
   .button {
     background-color: frosted white - rgba(225, 225, 225, .9);
     padding: 10px 10px;
+    border-radius: 6px;
     outline: none;
 
   }
@@ -60,7 +61,7 @@ header {
  
   .box {
     margin-top: 10vh;
-    height: 55vh;
+    height: 60vh;
     width: 70vh;
     background-color:  rgba(225, 225, 225, .9);
     opacity: 75%;
@@ -76,15 +77,29 @@ header {
     width: 30vh;
   }
   #poll-box{
+    height: 50vh;
+    width: 70vh;
+    padding-bottom: 10vh;
     padding: 40px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
 
   }
+  /* #poll-box {
+    height: 30vh;
+    width: 50vh;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
   #lets-cook-button {
     background-color: #0fb9b1;
-    width: 10vh;
+    width: 20vh;
   }
   /* #logo > img {
     background-image: url('assets/cookpot.svg');
