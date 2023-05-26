@@ -3,7 +3,7 @@ var letsCookButton = document.querySelector("#lets-cook-button")
 //event listeners here:
 letsCookButton.addEventListener("click", generateRandomDish)
 
-var RecipeBook = {
+var recipeBook = {
     sides: ["Fresh Summer Rolls", "Pickles", "Toast", "Tater Tots", "Cucumber Salad", "Breakfast Potatoes", "Rice",
     "Crispy Tofu", "Roasted Root Vegetables", "Roasted Mushrooms", "Hush Puppies", "Slaw"],
     mainDishes: ["Falafel Sandwich", "Bahn Mi", "Chicken Fried Rice", "Butternut Squash Soup",
