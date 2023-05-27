@@ -3,8 +3,11 @@ var mainDishButton = document.querySelector("#MainDish")
 var dessertButton = document.querySelector("#Dessert")
 var letsCookButton = document.querySelector("#lets-cook-button")
 var output = document.querySelector("#specificDish")
+var potPage = document.querySelector("#potLogo")
+var messagePage = document.querySelector(".letsCookResponse") 
 
 //event listeners here:
+window.addEventListener("load", showPot)
 letsCookButton.addEventListener("click", function(){
     generateRandomDish();
 
@@ -34,10 +37,16 @@ function generateRandomDish(){
        output.innerText = randomMenuItem(recipeBook.desserts)
     } 
 }
-
-function switchGraphic(){
-    
+function showPot(){
+    messagePage.classList.add("hidden")
+    potPage.classList.remove("hidden")
 }
+// function showNewOutput(){
+//     potPage.classList.add("hidden");
+//     output.classList.remove("hidden")
+
+
+// }
 
 
 
