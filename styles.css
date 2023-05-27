@@ -120,6 +120,9 @@ header {
     background-color: #0fb9b1;
     width: 20vh;
   }
+  #footer-button {
+    background-color: #0fb9b1;
+  }
   #outputMessage {
     display: flex;
     flex-direction: column;
@@ -162,11 +165,15 @@ header {
     font-size: medium;
     margin-right: 20px;
   }
+  .addRecipePane label{
+    font-size: large;
+  }
 
   .addRecipePane {
-    height: 10vh;
+    height: 5vh;
     width: 100%;
-    padding: 5px;
+    padding-bottom: 2.5vh;
+    padding-top: 3.5vh;
     padding-left: 20px; 
     padding-right: 20px;
     text-align: left;
@@ -176,6 +183,11 @@ header {
     display: flex;
     justify-content: flex-start;
     align-content: flex-end;
+  }
+  input.label {
+    height: 4vh;
+    width: 24vh;
+    margin-left: 1vh;
   }
   .inputLabel {
     /* margin-left: 10px;
