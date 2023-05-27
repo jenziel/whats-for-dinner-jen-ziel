@@ -62,12 +62,7 @@ header {
     outline: none;
 
   }
-
-  main {
-  /* display: flex;
-  flex-direction: column;
-  align-content: flex-end; */
-  }
+  
  .invisibleFlexBox {
   height: 60vh;
   display: flex;
@@ -189,14 +184,3 @@ header {
     width: 24vh;
     margin-left: 1vh;
   }
-  .inputLabel {
-    /* margin-left: 10px;
-    margin-right: 10px; */
-  }
-  /* #logo > img {
-    background-image: url('assets/cookpot.svg');
-    background-size: contain;
-    height: 25vh;
-    display: flex;
-    align-content: center;
-  } */

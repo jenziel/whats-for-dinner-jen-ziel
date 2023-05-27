@@ -3,6 +3,10 @@ var mainDishButton = document.querySelector("#MainDish")
 var dessertButton = document.querySelector("#Dessert")
 var letsCookButton = document.querySelector("#lets-cook-button")
 var headerButton = document.querySelector("#header-button")
+var addNewButton = document.querySelector("#footer-button")
+
+var input1 = document.querySelector("#box1")
+var input2 = document.querySelector("#box2")
 
 var output = document.querySelector("#specificDish")
 
@@ -21,6 +25,11 @@ letsCookButton.addEventListener("click", function(){
     outputMessage();
     generateRandomDish();
     showNewOutput();
+})
+addNewButton.addEventListener("click", function(){
+    outputMessage()
+    showNewOutput()
+    output.innerText = input2.value
 })
 
 var recipeBook = {
