@@ -10,7 +10,7 @@ var messagePage = document.querySelector(".letsCookResponse")
 window.addEventListener("load", showPot)
 letsCookButton.addEventListener("click", function(){
     generateRandomDish();
-
+    showNewOutput()
 })
 
 var recipeBook = {
@@ -41,12 +41,10 @@ function showPot(){
     messagePage.classList.add("hidden")
     potPage.classList.remove("hidden")
 }
-// function showNewOutput(){
-//     potPage.classList.add("hidden");
-//     output.classList.remove("hidden")
-
-
-// }
+function showNewOutput(){
+    potPage.classList.add("hidden")
+    messagePage.classList.remove("hidden")
+}
 
 
 
