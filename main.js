@@ -6,6 +6,7 @@ var output = document.querySelector("#specificDish")
 var potPage = document.querySelector("#potLogo")
 var messagePage = document.querySelector(".letsCookResponse") 
 var youShouldMake = document.querySelector("#youShouldMake")
+var addNewRecipeForm = document.querySelector("#recipePane")
 
 //event listeners here:
 window.addEventListener("load", showPot)
@@ -44,6 +45,7 @@ function generateRandomDish(){
 function showPot(){
     potPage.classList.remove("hidden")
     messagePage.classList.add("hidden")
+
 }
 function showNewOutput(){
     potPage.classList.add("hidden")
