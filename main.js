@@ -1,11 +1,14 @@
-var selectSide = document.querySelector("#Side")
-var selectMainDish = document.querySelector("#MainDish")
-var selectDessert = document.querySelector("#Dessert")
+var sideButton = document.querySelector("#Side")
+var mainDishButton = document.querySelector("#MainDish")
+var dessertButton = document.querySelector("#Dessert")
 var letsCookButton = document.querySelector("#lets-cook-button")
-
+var output = document.querySelector("#specificDish")
 
 //event listeners here:
-letsCookButton.addEventListener("click", generateRandomDish)
+letsCookButton.addEventListener("click", function(){
+    generateRandomDish();
+
+})
 
 var recipeBook = {
     sides: ["Fresh Summer Rolls", "Pickles", "Toast", "Tater Tots", "Cucumber Salad", "Breakfast Potatoes", "Rice",
@@ -17,11 +20,24 @@ var recipeBook = {
                 "Macaroons", "Blueberry Cobbler", "Apple Pie", "Baklava", "Banana Bread", "Sugar Cookies"],
 }
 
+function randomMenuItem(menuSection){
+        var result = Math.floor(Math.random() * menuSection.length);
+         return menuSection[result]; 
+    }
 
 function generateRandomDish(){
-    return 
+    if (sideButton.checked == true){
+        output.innerText = randomMenuItem(recipeBook.sides)
+    } else if (mainDishButton.checked == true){
+        output.innerText = randomMenuItem(recipeBook.mainDishes)
+    } else if (dessertButton.checked == true) {
+       output.innerText = randomMenuItem(recipeBook.desserts)
+    } 
 }
 
+function switchGraphic(){
+    
+}
 
 
 
