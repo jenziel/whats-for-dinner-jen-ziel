@@ -27,6 +27,7 @@ letsCookButton.addEventListener("click", function(){
     showNewOutput();
 })
 addNewButton.addEventListener("click", function(){
+    updateRecipeBook(input2.value)
     outputMessage()
     showNewOutput()
     output.innerText = input2.value
@@ -68,6 +69,25 @@ function showPot(){
 function showNewOutput(){
     potPage.classList.add("hidden")
     messagePage.classList.remove("hidden")
+}
+
+function updateRecipeBook(){
+    var newName = input2.value
+    var menuType = input1.value
+    var result = menuType.toLowerCase()
+    if (result === "main dish"){
+        recipeBook.mainDishes.push(newName)
+    } else if (result === "sides"){
+        recipeBook.sides.push(newName)
+    } else if (result === "desserts"){
+        recipeBook.desserts.push(newName)
+    } 
+    
+//     else {var newID = newMenuType.replace(/\s+/g, '');
+//         ` <div>
+//     <input type="radio" id="${newID}" name="menuSection" value="${newMenuType}">
+//     <label for="${newID}">${newMenuType}</label>
+//   </div>`}
 }
 
 
