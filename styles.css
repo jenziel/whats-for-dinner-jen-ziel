@@ -101,16 +101,35 @@ header {
     font-size:xxx-large;
   }
 
-  #potlogo {
-  
-  }
-
-  #outputMessage {
-   
+  .letsCookResponse{
+    text-align: center;
+    padding: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: center; */
+    justify-content: space-around;
   }
 
   .hidden {
     display: none;
+  }
+
+  #specificDish {
+    padding: none;
+    font-weight: 500;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  #youShouldMake {
+    font-size: large;
+    font-weight: 500;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding: none;
   }
   /* #logo > img {
     background-image: url('assets/cookpot.svg');

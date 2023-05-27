@@ -5,12 +5,14 @@ var letsCookButton = document.querySelector("#lets-cook-button")
 var output = document.querySelector("#specificDish")
 var potPage = document.querySelector("#potLogo")
 var messagePage = document.querySelector(".letsCookResponse") 
+var youShouldMake = document.querySelector("#youShouldMake")
 
 //event listeners here:
 window.addEventListener("load", showPot)
 letsCookButton.addEventListener("click", function(){
+    outputMessage();
     generateRandomDish();
-    showNewOutput()
+    showNewOutput();
 })
 
 var recipeBook = {
@@ -27,7 +29,9 @@ function randomMenuItem(menuSection){
         var result = Math.floor(Math.random() * menuSection.length);
          return menuSection[result]; 
     }
-
+function outputMessage(){
+    youShouldMake.innerText = "You should make:"
+}
 function generateRandomDish(){
     if (sideButton.checked == true){
         output.innerText = randomMenuItem(recipeBook.sides)
@@ -38,8 +42,8 @@ function generateRandomDish(){
     } 
 }
 function showPot(){
-    messagePage.classList.add("hidden")
     potPage.classList.remove("hidden")
+    messagePage.classList.add("hidden")
 }
 function showNewOutput(){
     potPage.classList.add("hidden")
