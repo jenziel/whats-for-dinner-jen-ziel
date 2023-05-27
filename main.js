@@ -2,14 +2,21 @@ var sideButton = document.querySelector("#Side")
 var mainDishButton = document.querySelector("#MainDish")
 var dessertButton = document.querySelector("#Dessert")
 var letsCookButton = document.querySelector("#lets-cook-button")
+var headerButton = document.querySelector("#header-button")
+
 var output = document.querySelector("#specificDish")
+
 var potPage = document.querySelector("#potLogo")
-var messagePage = document.querySelector(".letsCookResponse") 
+var messagePage = document.querySelector(".letsCookResponse")
+var addRecipePane = document.querySelector(".addRecipePane")
+
 var youShouldMake = document.querySelector("#youShouldMake")
-var addNewRecipeForm = document.querySelector("#recipePane")
+
+
 
 //event listeners here:
 window.addEventListener("load", showPot)
+headerButton.addEventListener("click" , showRecipeForm)
 letsCookButton.addEventListener("click", function(){
     outputMessage();
     generateRandomDish();
@@ -26,6 +33,9 @@ var recipeBook = {
                 "Macaroons", "Blueberry Cobbler", "Apple Pie", "Baklava", "Banana Bread", "Sugar Cookies"],
 }
 
+function showRecipeForm(){
+    addRecipePane.style.display = "flex";
+}
 function randomMenuItem(menuSection){
         var result = Math.floor(Math.random() * menuSection.length);
          return menuSection[result]; 
@@ -45,7 +55,6 @@ function generateRandomDish(){
 function showPot(){
     potPage.classList.remove("hidden")
     messagePage.classList.add("hidden")
-
 }
 function showNewOutput(){
     potPage.classList.add("hidden")
