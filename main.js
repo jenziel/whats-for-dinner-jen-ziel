@@ -27,6 +27,7 @@ letsCookButton.addEventListener("click", function(){
     showNewOutput();
 })
 addNewButton.addEventListener("click", function(){
+    updateRecipeBook(input2.value)
     outputMessage()
     showNewOutput()
     output.innerText = input2.value
@@ -70,26 +71,20 @@ function showNewOutput(){
     messagePage.classList.remove("hidden")
 }
 
+function updateRecipeBook(){
+    var newName = input2.value
+    var menuType = input1.value
+    var result = menuType.toLowerCase()
+    if (result === "main dish" || result === "main dishes"){
+        recipeBook.mainDishes.push(newName)
+    } else if (result === "side" || result === "sides"){
+        recipeBook.sides.push(newName)
+    } else if (result === "dessert" || result === "desserts"){
+        recipeBook.desserts.push(newName)
+    } else {window.alert(`${menuType} is not a valid recipe type.  Try using 'side', 'main dish', or 'dessert' instead.`)
 
-
-
-
-
-
-
-
-
-
-
-// var sides = ["Fresh Summer Rolls", "Pickles", "Toast", "Tater Tots", "Cucumber Salad", "Breakfast Potatoes", "Rice",
-//  "Crispy Tofu", "Roasted Root Vegetables", "Roasted Mushrooms", "Hush Puppies", "Slaw"]
-
-// var mainDishes = ["Falafel Sandwich", "Bahn Mi", "Chicken Fried Rice", "Butternut Squash Soup",
-//  "Ramen", "Spicy Chicken Sandwich", "Empanadas", "Pepperoni Pizza", "Chicken Soup", "Pesto Pasta", "Thai Yellow Curry",
-//   "Hamburger", "Pollo a la Brasa", "Shrimp Tempura Sushi", "Meatballs"]
-
-// var desserts = ["Rice Pudding", "Bread Pudding", "Churros", "Flan", "Creme Brulee", "Funfetti Cake", "Brownies", "Pumpkin Pie",
-//  "Macaroons", "Blueberry Cobbler", "Apple Pie", "Baklava", "Banana Bread", "Sugar Cookies"]
+    }
+}
 
 
 
