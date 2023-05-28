@@ -8,7 +8,7 @@ var addNewButton = document.querySelector("#footer-button")
 var input1 = document.querySelector("#box1")
 var input2 = document.querySelector("#box2")
 
-var output = document.querySelector("#specificDish")
+var newRecipe = document.querySelector("#specificDish")
 var errorMsg = document.querySelector(".invalidRecipeError")
 
 var potPage = document.querySelector("#potLogo")
@@ -55,11 +55,11 @@ function outputMessage(){
 
 function generateRandomDish(){
     if (sideButton.checked == true){
-        output.innerText = randomMenuItem(recipeBook.sides)
+        newRecipe.innerText = randomMenuItem(recipeBook.sides)
     } else if (mainDishButton.checked == true){
-        output.innerText = randomMenuItem(recipeBook.mainDishes)
+        newRecipe.innerText = randomMenuItem(recipeBook.mainDishes)
     } else if (dessertButton.checked == true) {
-       output.innerText = randomMenuItem(recipeBook.desserts)
+       newRecipe.innerText = randomMenuItem(recipeBook.desserts)
     } 
 }
 
@@ -93,5 +93,5 @@ function updateRecipeBook(){
 function displayNewRecipe(){
     outputMessage()
     showNewOutput()
-    output.innerText = input2.value
+    newRecipe.innerText = input2.value
 }
