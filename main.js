@@ -13,23 +13,9 @@ var errorMsg = document.querySelector(".invalidRecipeError")
 
 var potPage = document.querySelector("#potLogo")
 var messagePage = document.querySelector(".letsCookResponse")
-var addRecipePane = document.querySelector(".addRecipePane")
+var addRecipePage = document.querySelector(".addRecipePage")
 
 var youShouldMake = document.querySelector("#youShouldMake")
-
-
-
-//event listeners here:
-window.addEventListener("load", showPot)
-headerButton.addEventListener("click" , showRecipeForm)
-letsCookButton.addEventListener("click", function(){
-    outputMessage();
-    generateRandomDish();
-    showNewOutput();
-})
-addNewButton.addEventListener("click", function(){
-    updateRecipeBook(input2.value)
-})
 
 var recipeBook = {
     sides: ["Fresh Summer Rolls", "Pickles", "Toast", "Tater Tots", "Cucumber Salad", "Breakfast Potatoes", "Rice",
@@ -41,16 +27,32 @@ var recipeBook = {
                 "Macaroons", "Blueberry Cobbler", "Apple Pie", "Baklava", "Banana Bread", "Sugar Cookies"],
 }
 
+//event listeners here:
+window.addEventListener("load", showPot)
+headerButton.addEventListener("click" , showRecipeForm)
+letsCookButton.addEventListener("click", function(){
+    outputMessage();
+    generateRandomDish();
+    showNewOutput();
+}) 
+
+addNewButton.addEventListener("click", function(){
+    updateRecipeBook(input2.value)
+})
+
 function showRecipeForm(){
-    addRecipePane.style.display = "flex";
+    addRecipePage.style.display = "flex";
 }
+
 function randomMenuItem(menuSection){
-        var result = Math.floor(Math.random() * menuSection.length);
-         return menuSection[result]; 
-    }
+    var result = Math.floor(Math.random() * menuSection.length);
+        return menuSection[result]; 
+}
+
 function outputMessage(){
     youShouldMake.innerText = "You should make:"
 }
+
 function generateRandomDish(){
     if (sideButton.checked == true){
         output.innerText = randomMenuItem(recipeBook.sides)
@@ -60,10 +62,12 @@ function generateRandomDish(){
        output.innerText = randomMenuItem(recipeBook.desserts)
     } 
 }
+
 function showPot(){
     potPage.classList.remove("hidden")
     messagePage.classList.add("hidden")
 }
+
 function showNewOutput(){
     potPage.classList.add("hidden")
     messagePage.classList.remove("hidden")
@@ -79,33 +83,15 @@ function updateRecipeBook(){
         recipeBook.sides.push(newName)
     } else if (result === "dessert" || result === "desserts"){
         recipeBook.desserts.push(newName)
-    // } else {window.alert(`${menuType} is not a valid recipe type.`)
     } else {
         return errorMsg.innerText = `* '${menuType}'` + " is not a valid recipe type."}
      {
-        return helperFunction()
+        return displayNewRecipe()
      }   
-    }
+}
     
-    function helperFunction(){
-        outputMessage()
-        showNewOutput()
-        output.innerText = input2.value
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function displayNewRecipe(){
+    outputMessage()
+    showNewOutput()
+    output.innerText = input2.value
+}
