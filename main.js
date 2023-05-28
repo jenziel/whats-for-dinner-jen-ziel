@@ -82,9 +82,9 @@ function updateRecipeBook(){
         recipeBook.sides.push(newName)
     } else if (result === "dessert" || result === "desserts"){
         recipeBook.desserts.push(newName)
-    // } else {window.alert(`${menuType} is not a valid recipe type.  Try using 'side', 'main dish', or 'dessert' instead.`)
+    // } else {window.alert(`${menuType} is not a valid recipe type.`)
     } else {
-        errorMsg.innerText = `* '${menuType}'` + " is not a valid recipe type.  Try using 'side', 'main dish', or 'dessert' instead."}
+        errorMsg.innerText = `* '${menuType}'` + " is not a valid recipe type."}
     }
 
 
