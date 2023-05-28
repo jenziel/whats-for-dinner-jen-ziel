@@ -19,15 +19,15 @@ var youShouldMake = document.querySelector("#youShouldMake")
 
 var recipeBook = {
     sides: ["Fresh Summer Rolls", "Pickles", "Toast", "Tater Tots", "Cucumber Salad", "Breakfast Potatoes", "Rice",
-            "Crispy Tofu", "Roasted Root Vegetables", "Roasted Mushrooms", "Hush Puppies", "Slaw"],
+            "Crispy Tofu", "Roasted Root Vegetables", "Roasted Mushrooms", "Hush Puppies", "Slaw", "Ants on a Log", "Seaweed Salad", "Edamame",
+            "Zucchini Fries", "Guacamole", "Italian Rice Salad", "Platanos"],
     mainDishes: ["Falafel Sandwich", "Bahn Mi", "Chicken Fried Rice", "Butternut Squash Soup","Ramen",
-                 "Spicy Chicken Sandwich", "Empanadas", "Pepperoni Pizza", "Chicken Soup", "Pesto Pasta", "Thai Yellow Curry",
-                "Hamburger", "Pollo a la Brasa", "Shrimp Tempura Sushi", "Meatballs"],
+                 "Spicy Chicken Sandwich", "Empanadas", "Pepperoni Pizza", "Chicken Soup", "Pesto Pasta", "Thai Yellow Curry", "Hamburger",
+                "Pollo a la Brasa", "Shrimp Tempura Sushi", "Meatballs", "Samosas", "Meatloaf", "Chilaquiles", "Breakfast Burrito"],
     desserts:  ["Rice Pudding", "Bread Pudding", "Churros", "Flan", "Creme Brulee", "Funfetti Cake", "Brownies", "Pumpkin Pie",
                 "Macaroons", "Blueberry Cobbler", "Apple Pie", "Baklava", "Banana Bread", "Sugar Cookies"],
 }
 
-//event listeners here:
 window.addEventListener("load", showPot)
 headerButton.addEventListener("click" , showRecipeForm)
 letsCookButton.addEventListener("click", function(){
@@ -84,7 +84,7 @@ function updateRecipeBook(){
     } else if (result === "dessert" || result === "desserts"){
         recipeBook.desserts.push(newName)
     } else {
-        return errorMsg.innerText = `* '${menuType}'` + " is not a valid recipe type."}
+        return errorMsg.innerText = `* '${menuType}' is not a valid recipe type.`}
      {
         return displayNewRecipe()
      }   
