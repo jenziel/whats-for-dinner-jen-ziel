@@ -58,9 +58,8 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 6px;
-    height: 5vh;
+    height: 4vh;
     outline: none;
-
   }
   
  .invisibleFlexBox {
@@ -73,6 +72,7 @@ header {
   height: 33.3vh;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-start;
  }
  
   .box {
@@ -114,6 +114,7 @@ header {
   #lets-cook-button {
     background-color: #0fb9b1;
     width: 20vh;
+    padding-bottom: 24px;
   }
   #footer-button {
     background-color: #0fb9b1;
@@ -162,6 +163,7 @@ header {
   }
   .addRecipePane label{
     font-size: large;
+    margin-left: 10px;
   }
 
   .addRecipePane {
@@ -183,4 +185,26 @@ header {
     height: 4vh;
     width: 24vh;
     margin-left: 1vh;
+  }
+
+  .flexbox3 {
+    height: 3vh;
+    width: 40vh;
+    display: flex;
+    align-content: flex-start;
+  }
+
+  p.invalidRecipeError {
+      margin-block-start: 0em;
+      margin-left: 15vh;
+      font-size: small;
+      color: red;
+    /* position: absolute;
+    bottom: 30px; */  
+  }
+
+  #footer-button {
+    padding-bottom: 24px;
+    height: 1px;
+    padding-bottom: 24px;
   }
