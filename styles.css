@@ -58,7 +58,7 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 6px;
-    height: 5vh;
+    height: 4vh;
     outline: none;
 
   }
@@ -73,6 +73,7 @@ header {
   height: 33.3vh;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-start;
  }
  
   .box {
@@ -183,4 +184,20 @@ header {
     height: 4vh;
     width: 24vh;
     margin-left: 1vh;
+  }
+
+  .flexbox3 {
+    height: 5vh;
+    width: 70vh;
+    display: flex;
+    align-content: flex-start;
+  }
+  p.invalidRecipeError {
+      margin-block-start: 0em;
+      margin-left: 12vh;
+      font-size: small;
+      color: red;
+    /* position: absolute;
+    bottom: 30px; */
+    
   }

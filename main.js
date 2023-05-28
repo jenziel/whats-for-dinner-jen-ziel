@@ -9,6 +9,7 @@ var input1 = document.querySelector("#box1")
 var input2 = document.querySelector("#box2")
 
 var output = document.querySelector("#specificDish")
+var errorMsg = document.querySelector(".invalidRecipeError")
 
 var potPage = document.querySelector("#potLogo")
 var messagePage = document.querySelector(".letsCookResponse")
@@ -81,10 +82,11 @@ function updateRecipeBook(){
         recipeBook.sides.push(newName)
     } else if (result === "dessert" || result === "desserts"){
         recipeBook.desserts.push(newName)
-    } else {window.alert(`${menuType} is not a valid recipe type.  Try using 'side', 'main dish', or 'dessert' instead.`)
-
+    // } else {window.alert(`${menuType} is not a valid recipe type.  Try using 'side', 'main dish', or 'dessert' instead.`)
+    } else {
+        errorMsg.innerText = `* '${menuType}'` + " is not a valid recipe type.  Try using 'side', 'main dish', or 'dessert' instead."}
     }
-}
+
 
 
 
