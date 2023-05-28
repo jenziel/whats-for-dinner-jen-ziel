@@ -13,7 +13,7 @@ var errorMsg = document.querySelector(".invalidRecipeError")
 
 var potPage = document.querySelector("#potLogo")
 var messagePage = document.querySelector(".letsCookResponse")
-var addRecipePane = document.querySelector(".addRecipePane")
+var addRecipePage = document.querySelector(".addRecipePage")
 
 var youShouldMake = document.querySelector("#youShouldMake")
 
@@ -42,7 +42,7 @@ var recipeBook = {
 }
 
 function showRecipeForm(){
-    addRecipePane.style.display = "flex";
+    addRecipePage.style.display = "flex";
 }
 function randomMenuItem(menuSection){
         var result = Math.floor(Math.random() * menuSection.length);

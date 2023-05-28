@@ -104,11 +104,11 @@ header {
     height: 30vh;
     width: 30vh;
   }
+  
   #poll-box{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-
   }
   
   #lets-cook-button {
@@ -135,7 +135,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-content: center; */
     justify-content: space-around;
   }
 
@@ -161,12 +160,12 @@ header {
     font-size: medium;
     margin-right: 20px;
   }
-  .addRecipePane label{
+  .addRecipePage label{
     font-size: large;
     margin-left: 10px;
   }
 
-  .addRecipePane {
+  .addRecipePage {
     height: 5vh;
     width: 100%;
     padding-bottom: 2.5vh;
@@ -207,4 +206,7 @@ header {
     padding-bottom: 24px;
     height: 1px;
     padding-bottom: 24px;
+  }
+  #asterisk {
+    color: red;
   }
