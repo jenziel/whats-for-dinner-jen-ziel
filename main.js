@@ -29,9 +29,6 @@ letsCookButton.addEventListener("click", function(){
 })
 addNewButton.addEventListener("click", function(){
     updateRecipeBook(input2.value)
-    outputMessage()
-    showNewOutput()
-    output.innerText = input2.value
 })
 
 var recipeBook = {
@@ -84,7 +81,16 @@ function updateRecipeBook(){
         recipeBook.desserts.push(newName)
     // } else {window.alert(`${menuType} is not a valid recipe type.`)
     } else {
-        errorMsg.innerText = `* '${menuType}'` + " is not a valid recipe type."}
+        return errorMsg.innerText = `* '${menuType}'` + " is not a valid recipe type."}
+     {
+        return helperFunction()
+     }   
+    }
+    
+    function helperFunction(){
+        outputMessage()
+        showNewOutput()
+        output.innerText = input2.value
     }
 
 
